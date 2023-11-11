@@ -61,7 +61,7 @@ body {
   }
   
   .profile-photo {
-    flex-basis: 40%;
+    flex-basis: 15%;
     text-align: right;
   }
   
@@ -94,4 +94,27 @@ body {
   
   main > * {
     flex-shrink: 0;
+  }
+
+  .publication-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .publication-item {
+    display: flex;
+    margin-bottom: 10px; /* Adds space between list items */
+    align-items: baseline; /* Aligns items on their baseline */
+  }
+  
+  .publication-year {
+    flex: 0 0 50px; /* Adjust width as needed */
+    font-weight: bold;
+    margin-right: 15px; /* Adds some space between the year and the text */
+  }
+  
+  .publication-text {
+    flex: 1; /* Allows text to fill the remaining space */
+    text-align: left;
   }
