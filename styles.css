@@ -1,120 +1,152 @@
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background: #fff;
+  color: #333;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease-out;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #2a7ae2;
+}
+
+section {
+  margin: 2rem 5%;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.bio {
+  flex-basis: 60%;
+}
+
+.profile-photo {
+  flex-basis: 15%;
+  text-align: right;
+}
+
+.profile-photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px; /* Optional: for rounded corners */
+}
+
+footer {
+  background: #fff;
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+@media (max-width: 768px) {
   header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    position: relative; /* Ensures that the menu toggle is positioned relative to the header */
   }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  header p {
-    margin: 0;
-  }
-  
-  nav ul {
-    padding: 0;
-    list-style: none;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  section {
-    padding: 1rem;
-    margin: 1rem 0;
-  }
-  
-  footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
+  #menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
     position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .bio {
-    flex-basis: 80%;
-  }
-  
-  .profile-photo {
-    flex-basis: 15%;
-    text-align: right;
-  }
-  
-  .profile-photo img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px; /* Optional: for rounded corners */
-  }
-  
-  /* To ensure footer does not overlap */
-  footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-  }
-  
-  /* Fixes for scrolling and layout */
-  body, html {
-    height: 100%;
-    margin: 0;
-  }
-  
-  main {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  main > * {
-    flex-shrink: 0;
+    top: 1rem;
+    right: 1rem;
   }
 
-  .publication-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positions the menu right below the header */
+    left: 0;
+    right: 0;
+    background: white; /* Adds a background to the dropdown */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000; /* Ensures the dropdown is above other content */
   }
-  
-  .publication-item {
-    display: flex;
-    margin-bottom: 10px; /* Adds space between list items */
-    align-items: baseline; /* Aligns items on their baseline */
+
+  nav ul.active {
+    display: block; /* Display the dropdown when active */
   }
-  
-  .publication-year {
-    flex: 0 0 50px; /* Adjust width as needed */
-    font-weight: bold;
-    margin-right: 15px; /* Adds some space between the year and the text */
+
+  nav ul li {
+    display: block; /* Stack the links vertically */
+    text-align: left; /* Align text to the left or center as per design */
+    border-top: 1px solid #ddd; /* Optional: adds a separator between links */
   }
-  
-  .publication-text {
-    flex: 1; /* Allows text to fill the remaining space */
-    text-align: left;
+
+  nav ul li a {
+    display: block; /* Make the link fill the entire list item */
+    padding: 10px; /* Add some padding for touch targets */
+    color: #333; /* Text color */
+    text-decoration: none; /* No underline */
   }
+
+  nav ul li a:hover {
+    background-color: #f7f7f7; /* Slight background on hover for touch targets */
+  }
+}
+
+.publication-list {
+  list-style: none;
+  padding: 0;
+}
+
+.publication-item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.publication-year {
+  min-width: 50px; /* Adjust as needed */
+  font-weight: bold;
+}
+
+.publication-text {
+  flex-grow: 1;
+  padding-left: 15px; /* Adjust as needed */
+}
