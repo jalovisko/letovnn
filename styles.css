@@ -150,3 +150,17 @@ footer {
   flex-grow: 1;
   padding-left: 15px; /* Adjust as needed */
 }
+
+#contact i {
+  margin-right: 8px; /* Adjust the space between the icon and the text */
+}
+
+#contact a {
+  color: #333; /* or any color you prefer */
+  text-decoration: none; /* No underline */
+}
+
+#contact a:hover,
+#contact a:focus {
+  color: #0e76a8; /* LinkedIn blue, for example */
+}
