@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LatticeQuery</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <!-- remember, jQuery is completely optional -->
     <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
     <script type="text/javascript" src="js/jquery.particleground.js"></script>
@@ -17,16 +15,15 @@
 <body>
   
   <div id="particles">
-      <div id="intro">
-          <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10; font-size: 200%">LatticeQuery&nbsp</h2>
-            <hr style="width: 50%; background-color: #FFFFFF; border-color: #FFFFFF;">
+    <div id="intro">
+        <h1>LatticeQuery</h1>
         <a href="https://github.com/jalovisko/LatticeQuery" style="color: white;"><i class="fab fa-github" style="font-size: 2em;"></i></a>
         &nbsp
       </div>
   </div>
   
   <main>
-    <a href="https://letovnn.com">Back to Homepage</a>
+    <a href="https://letovnn.com" class="back-link">Back to Homepage</a>
     <section id="introduction">
      <h2>Introduction</h2>
      <p>Welcome to LatticeQuery - an open-source software designed for the modeling of lattice structures. This tool allows modeling of heterogeneous lattice structures, both beam-based and surface-based, and it is built upon the robust foundation of the CadQuery GUI editor. LatticeQuery supports Linux, Windows, and MacOS, making it accessible to a wide array of users.</p>
@@ -85,7 +82,7 @@
 
      <h3>4. Software architecture</h3>
 
-     <p>The covered geometric modeling concepts are implemented in the open-source software named LatticeQuery. It utilizes Open CASCADE and parametric modeling techniques.</p>
+     <p>The covered geometric modeling concepts are implemented in the open-source software named LatticeQuery. It utilizes the <a href="https://www.opencascade.com/">Open CASCADE</a> geometric modeling kernel and parametric modeling techniques from <a href="https://github.com/CadQuery/cadquery">CadQuery</a>.</p>
 
      <img src="files/software_architecture.png"style='height: 60%; width: 60%; object-fit: contain'/>
 
@@ -99,5 +96,10 @@
      <p>For any further queries, feel free to reach out through our GitHub repository. We also welcome contributions and ideas to improve and extend the capabilities of LatticeQuery.</p>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; 2023 Nikita Letov</p>
+  </footer>
   
+</body>
 </html>
