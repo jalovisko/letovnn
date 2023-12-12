@@ -164,3 +164,52 @@ footer {
 #contact a:focus {
   color: #0e76a8; /* LinkedIn blue, for example */
 }
+
+.contact-icons p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem; /* This controls the space between the rows */
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Add a hover effect to the anchor tags */
+.contact-icons a:hover,
+.contact-icons a:focus {
+  color: #52b7b2; /* Light blue color on hover */
+}
+
+/* Ensure that the icons also change color */
+.contact-icons a:hover i,
+.contact-icons a:hover img {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(93%) saturate(400%) hue-rotate(191deg) brightness(99%) contrast(101%);
+}
+
+/* Reset image color to default if you're using an SVG with fill property */
+.contact-icons a img {
+  transition: filter 0.3s; /* Smooth transition for filter change */
+}
+
+.contact-icons a i,
+.contact-icons a img {
+  font-size: 1.2rem; /* Adjust the font size of icons to match the text */
+  width: 1.2rem; /* Adjust image icons to match the size of font icons */
+  height: auto; /* Maintain the aspect ratio of image icons */
+}
+
+.contact-icons i,
+.contact-icons .contact-logo {
+  margin-right: 8px; /* Space between icon/logo and text */
+}
+
+.contact-logo {
+  width: 20px; /* Adjust width as needed */
+  height: auto; /* Adjust height automatically */
+}
